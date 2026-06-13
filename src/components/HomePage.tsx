@@ -522,25 +522,8 @@ export default function HomePage({
                   <h2 className={`text-2xl font-bold font-display mb-1 tracking-tight ${theme === 'light' ? 'text-slate-900' : 'text-white'}`}>Join VibeChat Gateway</h2>
                   <p className="text-xs text-slate-500">Select an entrance gateway to access the stranger lounge</p>
                 </div>
-
-                {rejoinToken && rejoinUsername && (
-                  <div className="p-4 rounded-3xl bg-indigo-500/10 border border-indigo-500/30 animate-pulse-slow space-y-2 mt-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-[10px] font-black uppercase tracking-widest text-indigo-400">⚡ One-Click Instant Rejoin</span>
-                      <span className="text-[9px] bg-indigo-500/20 px-2 py-0.5 rounded-full font-bold text-indigo-300 uppercase">{rejoinType}</span>
-                    </div>
-                    <p className={`text-xs ${theme === 'light' ? 'text-slate-750' : 'text-slate-300'}`}>
-                      Welcome back! Would you like to instantly rejoin as <span className="font-extrabold text-indigo-400">{rejoinUsername}</span>?
-                    </p>
-                    <button 
-                      type="button"
-                      onClick={() => onRejoin && onRejoin()}
-                      className="w-full py-2.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-black rounded-xl text-xs transition duration-300 shadow-md cursor-pointer transform active:scale-95"
-                    >
-                      Connect Lobby Safely
-                    </button>
-                  </div>
-                )}
+                
+              
 
                   <div className="grid grid-cols-1 gap-5 pt-4">
                     {/* Guest access card gateway */}
