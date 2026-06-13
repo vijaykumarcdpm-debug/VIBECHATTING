@@ -1476,6 +1476,7 @@ export default function App() {
               const tok = localStorage.getItem('vibechat_rejoin_token');
               if (tok) {
                 setToken(tok);
+                setScreen('lobby');
                 showToast('Welcome back! Direct transport to Initial People Lobby completed.');
               }
             }}
