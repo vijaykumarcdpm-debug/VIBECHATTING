@@ -1473,13 +1473,24 @@ export default function App() {
               localStorage.setItem('vibechat_theme', nextTheme);
             }}
             onRejoin={() => {
-              const tok = localStorage.getItem('vibechat_rejoin_token');
-              if (tok) {
-                setToken(tok);
-                setScreen('lobby');
-                showToast('Welcome back! Direct transport to Initial People Lobby completed.');
-              }
-            }}
+  const tok = localStorage.getItem('vibechat_rejoin_token');
+
+  if (tok) {
+
+    window.history.pushState(
+      { vibechat: 'lobby' },
+      '',
+      window.location.pathname
+    );
+
+    setToken(tok);
+    setScreen('lobby');
+
+    showToast(
+      'Welcome back! Direct transport to Initial People Lobby completed.'
+    );
+  }
+}}
           />
         )
       ) : (
