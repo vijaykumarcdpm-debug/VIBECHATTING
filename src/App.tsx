@@ -353,6 +353,43 @@ export default function App() {
     editUsername.trim()
   );
 
+  localStorage.setItem(
+    'vibechat_rejoin_gender',
+    editGender || ''
+  );
+
+  localStorage.setItem(
+    'vibechat_rejoin_city',
+    editCity.trim()
+  );
+
+  localStorage.setItem(
+    'vibechat_rejoin_state',
+    editState.trim()
+  );
+
+  localStorage.setItem(
+    'vibechat_rejoin_country',
+    editCountry.trim()
+  );
+
+  localStorage.setItem(
+    'vibechat_rejoin_bio',
+    editBio.trim()
+  );
+
+  localStorage.setItem(
+    'vibechat_rejoin_age',
+    String(ageNum || '')
+  );
+
+  if (editPic) {
+    localStorage.setItem(
+      'vibechat_rejoin_profilePic',
+      editPic
+    );
+  }
+
   showToast('Profile updated successfully!');
 
   fetchLatestProfile();
