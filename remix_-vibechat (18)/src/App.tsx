@@ -912,9 +912,6 @@ export default function App() {
     localStorage.removeItem('vibechat_token');
     localStorage.removeItem('vibechat_saved_token');
     localStorage.removeItem('vibechat_saved_type');
-    localStorage.removeItem('vibechat_rejoin_token');
-    localStorage.removeItem('vibechat_rejoin_username');
-    localStorage.removeItem('vibechat_rejoin_type');
     setToken(null);
     setMe(null);
     setScreen('lobby');
